@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERIUM ATELIER — Architectural Kitchens & Bespoke Cabinetry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Subtle Brass Scroll Progress Line -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">INTERIUM <span>ATELIER</span></div>
+        <nav class="nav">
+            <a href="#projects">Collections</a>
+            <a href="#atelier-lab">Material Lab</a>
+            <a href="#process">Process</a>
+            <a href="#" class="btn-contact" id="openModalNav">Private Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content reveal">
+            <span class="eyebrow">GLENDALE • LOS ANGELES</span>
+            <h1>Architectural Kitchens & Bespoke Cabinetry</h1>
+            <p>Precision European engineering, tactile natural veneers, and seamless spatial geometry crafted for modern residences.</p>
+            <div class="hero-actions">
+                <button class="cta-button" id="openModalHero">Schedule Consultation</button>
+                <a href="#atelier-lab" class="ghost-link">Explore Materials &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Collections -->
+    <section class="projects" id="projects">
+        <div class="section-header reveal">
+            <span class="eyebrow">01 / CURATED LINES</span>
+            <h2>Signature Collections</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=85" alt="Milano Monolith">
+                </div>
+                <div class="project-info">
+                    <span class="card-tag">SERIES I</span>
+                    <h3>Milano Monolith</h3>
+                    <p>Ultra-matte anti-fingerprint Fenix surfaces, recessed anodized profiles, and monolithic stone islands.</p>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Nordic Smoked Oak">
+                </div>
+                <div class="project-info">
+                    <span class="card-tag">SERIES II</span>
+                    <h3>Nordic Smoked Oak</h3>
+                    <p>Book-matched European oak veneers paired with fluted bronze glass and warm 2700K integrated LED channels.</p>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Architectural Wardrobes">
+                </div>
+                <div class="project-info">
+                    <span class="card-tag">SERIES III</span>
+                    <h3>Architectural Wardrobes</h3>
+                    <p>Floor-to-ceiling walk-in dressing rooms with leather-lined drawers and whisper-quiet concealed hardware.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE FEATURE: Interactive Material & Lighting Studio -->
+    <section class="material-lab" id="atelier-lab">
+        <div class="section-header reveal">
+            <span class="eyebrow">02 / TACTILE EXPERIENCE</span>
+            <h2>Material & Lighting Studio</h2>
+            <p class="section-sub">Select a surface finish and switch showroom ambiance to preview how our materials respond to light.</p>
+        </div>
+
+        <div class="lab-container reveal">
+            <!-- Left: Interactive Swatches & Lighting Toggle -->
+            <div class="lab-controls">
+                <div class="ambiance-switch">
+                    <span>AMBIANCE MODE:</span>
+                    <button class="mode-btn active" data-mode="day">Architectural Daylight</button>
+                    <button class="mode-btn" data-mode="night">2700K Warm LED</button>
+                </div>
+
+                <div class="swatch-list">
+                    <div class="swatch-item active" 
+                         data-title="Fenix NTM® Nero Ingo" 
+                         data-origin="Italy • Thermal-Healing Matte" 
+                         data-desc="Zero light reflectivity, velvety soft-touch surface with microscopic thermal self-healing against micro-scratches."
+                         data-img="https://roundhousedesign.com/wp-content/uploads/2025/05/2_lipman.jpg">
+                        <span class="swatch-dot" style="background: #141518;"></span>
+                        <div>
+                            <h4>Nero Ingo Matte</h4>
+                            <small>Ultra-Matte Nanotechnology</small>
+                        </div>
+                    </div>
+
+                    <div class="swatch-item" 
+                         data-title="Fumed European Oak" 
+                         data-origin="Austria • Vertical Grain Veneer" 
+                         data-desc="Deeply brushed natural oak treated to bring out rich espresso undertones and organic architectural grain."
+                         data-img="https://cdn11.bigcommerce.com/s-4aaphn/images/stencil/1280x1280/products/294/3252/oak-fumed_2__33085.1740421245.jpg?c=2">
+                        <span class="swatch-dot" style="background: linear-gradient(135deg, #5c3d28, #2d1c11);"></span>
+                        <div>
+                            <h4>Fumed European Oak</h4>
+                            <small>Natural Brushed Veneer</small>
+                        </div>
+                    </div>
+
+                    <div class="swatch-item" 
+                         data-title="Brushed Champagne Brass" 
+                         data-origin="Germany • PVD Coated Metal" 
+                         data-desc="Hand-brushed metallic accents and recessed grip channels engineered to resist oxidation and fingerprints."
+                         data-img="https://img.magnific.com/premium-photo/background-image-brushed-brass-metal-texture_1151123-73624.jpg?semt=ais_hybrid&w=740&q=80">
+                        <span class="swatch-dot" style="background: linear-gradient(135deg, #e5c687, #9e7b36);"></span>
+                        <div>
+                            <h4>Champagne Brass PVD</h4>
+                            <small>Architectural Metal Trim</small>
+                        </div>
+                    </div>
+
+                    <div class="swatch-item" 
+                         data-title="Pietra Grey Honed Stone" 
+                         data-origin="Spain • Sintered Porcelain Slab" 
+                         data-desc="Non-porous 12mm monolithic slab with subtle white veining, heat-proof and impervious to staining."
+                         data-img="https://tinostone.com/wp-content/uploads/2016/09/close_up_pietra_grey.jpg">
+                        <span class="swatch-dot" style="background: linear-gradient(135deg, #54585d, #2b2d30);"></span>
+                        <div>
+                            <h4>Pietra Grey Monolith</h4>
+                            <small>Honed Sintered Stone</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Live Preview Stage -->
+            <div class="lab-stage" id="labStage">
+                <div class="stage-glow" id="stageGlow"></div>
+                <img id="labImage" src="https://roundhousedesign.com/wp-content/uploads/2025/05/2_lipman.jpg" alt="Material Preview">
+                <div class="stage-overlay">
+                    <span class="stage-origin" id="labOrigin">Italy • Thermal-Healing Matte</span>
+                    <h3 id="labTitle">Fenix NTM® Nero Ingo</h3>
+                    <p id="labDesc">Zero light reflectivity, velvety soft-touch surface with microscopic thermal self-healing against micro-scratches.</p>
+                    <button class="btn-contact" id="requestSampleBtn" style="margin-top: 18px; background: rgba(11,12,16,0.8); cursor: pointer;">Request This Finish Sample</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship Pillars -->
+    <section class="features" id="features">
+        <div class="feature-card reveal">
+            <span class="feature-idx">I</span>
+            <h3>Millimeter Precision</h3>
+            <p>Laser-measured site surveys and CNC-calibrated joinery ensure zero-gap alignment across every elevation.</p>
+        </div>
+        <div class="feature-card reveal">
+            <span class="feature-idx">II</span>
+            <h3>Concealed Engineering</h3>
+            <p>Equipped exclusively with Blum Legrabox and Hettich concealed motion systems tested for 200,000 cycles.</p>
+        </div>
+        <div class="feature-card reveal">
+            <span class="feature-idx">III</span>
+            <h3>White-Glove Execution</h3>
+            <p>Dedicated architectural project management from initial 3D CAD drawings to final installation in your home.</p>
+        </div>
+    </section>
+
+
+    
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section-header reveal">
+            <span class="eyebrow">03 / METHODOLOGY</span>
+            <h2>The Atelier Process</h2>
+        </div>
+        <div class="process-steps">
+            <div class="step reveal">
+                <span class="step-num">01</span>
+                <h3>Spatial Brief</h3>
+                <p>Private consultation to evaluate architectural blueprints, ergonomics, and material direction.</p>
+            </div>
+            <div class="step reveal">
+                <span class="step-num">02</span>
+                <h3>3D CAD & Lighting</h3>
+                <p>Full technical elevations, appliance integration specs, and photorealistic renders.</p>
+            </div>
+            <div class="step reveal">
+                <span class="step-num">03</span>
+                <h3>Bespoke Fabrication</h3>
+                <p>Custom manufacturing using sustainably sourced European panels and solid hardwoods.</p>
+            </div>
+            <div class="step reveal">
+                <span class="step-num">04</span>
+                <h3>Master Installation</h3>
+                <p>Precision assembly, calibration of reveals, and white-glove handover.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">INTERIUM <span>ATELIER</span></div>
+                <p>Architectural kitchens, bespoke cabinetry, and custom millwork.</p>
+                <p class="footer-address">1125 E Broadway, Glendale, CA 91204</p>
+            </div>
+            <div class="footer-links">
+                <h4>Atelier Hours</h4>
+                <p>Monday – Friday: 10:00 AM – 6:00 PM</p>
+                <p>Saturday: By Private Appointment</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Inquiries</h4>
+                <p>info@interium-atelier.com</p>
+                <button class="btn-contact" id="openModalFooter" style="margin-top: 15px; background: transparent; cursor: pointer;">Book Private Appointment</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Interium Atelier. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <span class="eyebrow" style="margin-bottom: 8px; display: block;">PRIVATE CONSULTATION</span>
+            <h2>Begin Your Project</h2>
+            <p>Share your contact details and our design team will arrange a showroom visit or virtual review.</p>
+            <form id="leadForm">
+                <input type="text" id="leadName" placeholder="Full Name" required>
+                <input type="email" id="leadEmail" placeholder="Email Address" required>
+                <input type="tel" id="leadPhone" placeholder="Phone Number" required>
+                <input type="text" id="leadInterest" placeholder="Selected Finish / Project Scope (Optional)">
+                <button type="submit" class="cta-button" style="width: 100%; margin-top: 10px;">Submit Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
